@@ -55,8 +55,10 @@ public class ButtonExample {
 
         //finding the height and the width of the button
         WebElement buttonSize = driver.findElement(By.id("j_idt88:j_idt98"));
-        Dimension  size = buttonSize.getSize();
-        System.out.println("Size is " + size);
+       int  height  = buttonSize.getSize().getHeight();
+       int width  = buttonSize.getSize().getWidth();
+        System.out.println("Button size are: " + width + " " + height);
+
 
 
 
