@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -56,7 +53,10 @@ public class ButtonExample {
         System.out.println("Color is " + color);
 
 
-        //
+        //finding the height and the width of the button
+        WebElement buttonSize = driver.findElement(By.id("j_idt88:j_idt98"));
+        Dimension  size = buttonSize.getSize();
+        System.out.println("Size is " + size);
 
 
 
