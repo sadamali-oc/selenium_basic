@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -39,7 +40,26 @@ public class ButtonExample {
 //        Assert.assertEquals(driver.getTitle(),"Dashboard");
 
         //finding the position of the submit button
-        
+
+        driver.navigate().back();
+        WebElement positionButton = driver.findElement(By.id("j_idt88:j_idt94"));
+        Point xyPoint = positionButton.getLocation();
+        int x = xyPoint.getX();
+        int y =xyPoint.getY();
+        System.out.println("Position button coordinates are: " + x + " " + y);
+
+
+        //finding the save button color
+
+        WebElement buttonColor = driver.findElement(By.id("j_idt88:j_idt96"));
+        String color = buttonColor.getCssValue("background-color");
+        System.out.println("Color is " + color);
+
+
+        //
+
+
+
 
 
 
