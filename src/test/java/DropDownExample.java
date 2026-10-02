@@ -41,6 +41,14 @@ public class DropDownExample {
             System.out.println(element.getText());
         }
 
+        //using sendkeys select dropdown value
+
+        selectValues.sendKeys("Puppeteer");
+
+        //selecting values in a bootstrap dropdown
+        
+
+
 
 
 
