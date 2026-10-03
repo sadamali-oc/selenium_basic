@@ -40,15 +40,8 @@ public class RadioCheckBox {
         }
 
 
-
-
-
-
-
-
-
-
         //select the age group(only if not selected)
+        
 
 
     }
