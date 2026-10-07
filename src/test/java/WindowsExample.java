@@ -27,16 +27,31 @@ public class WindowsExample {
         String  oldwindow = driver.getWindowHandle();
         System.out.println("Parent Window Handle is "+oldwindow);
 
-        Set<String> handles = driver.getWindowHandles();
-        System.out.println("Handles are"+handles.size());
-
-        
-
-
-
         WebElement openButton = driver.findElement(By.xpath("//*[@id='j_idt88:new']/span"));
         openButton.click();
         Thread.sleep(3000);
+
+        Set<String> handles = driver.getWindowHandles();
+        System.out.println("Handles are "+handles.size());
+
+        //first method - using foreach loop
+        for (String newWindow : handles){
+
+            System.out.println(newWindow);
+            driver.switchTo().window(newWindow);
+            System.out.println("Page Title is "+driver.getTitle());
+        }
+
+        driver.close();
+
+        driver.switchTo().window(oldwindow);
+        
+        WebElement openButton1 = driver.findElement(By.xpath("//*[@id='j_idt88:new']/span"));
+        boolean openButtonVisibility = openButton1.isDisplayed();
+        System.out.println("Open Button visibility is "+openButtonVisibility);
+
+
+
 
 
 
