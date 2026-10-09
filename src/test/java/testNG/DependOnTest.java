@@ -5,18 +5,18 @@ import org.testng.annotations.Test;
 public class DependOnTest {
 
 
-    @Test
+    @Test()
     public  void oLevel(){
-        System.out.println("chamalka TestNG learn");
+        System.out.println("olevel TestNG learn");
     }
 
-    @Test
+    @Test(priority = 1,dependsOnMethods = "oLevel")
     public  void aLevel(){
-        System.out.println("chamalka TestNG learn");
+        System.out.println("alevel TestNG learn");
     }
 
-    @Test
+    @Test(priority = 2 , dependsOnMethods = {"oLevel", "aLevel"})
     public  void campus(){
-        System.out.println("chamalka TestNG learn");
+        System.out.println("campus TestNG learn");
     }
 }
