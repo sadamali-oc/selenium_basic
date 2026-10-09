@@ -45,7 +45,7 @@ public class WindowsExample {
         driver.close();
 
         driver.switchTo().window(oldwindow);
-        
+
         WebElement openButton1 = driver.findElement(By.xpath("//*[@id='j_idt88:new']/span"));
         boolean openButtonVisibility = openButton1.isDisplayed();
         System.out.println("Open Button visibility is "+openButtonVisibility);
