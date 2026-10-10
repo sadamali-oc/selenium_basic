@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="D:/chamalka projects/selenium_learning(failed)">
+    <classes>
+      <class name="testNG.DependOnTest">
+        <methods>
+          <include name="aLevel"/>
+          <include name="oLevel"/>
+        </methods>
+      </class> <!-- testNG.DependOnTest -->
+    </classes>
+  </test> <!-- D:/chamalka projects/selenium_learning(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -12,12 +12,12 @@ public class TestNGAnnotation {
         testing.withoutTestNG();
     }
 
-    public  void withoutTestNG(){
+    public void withoutTestNG() {
         System.out.println("chamalka sadamali with out TestNG");
     }
 
     @Test
-    public  void test(){
+    public void test() {
         System.out.println("chamalka TestNG learn");
     }
 

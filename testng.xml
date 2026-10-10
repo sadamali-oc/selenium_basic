@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/chamalka projects/selenium_learning">
+        <classes>
+            <class name="testNG.DependOnTest">
+                <methods>
+                    <include name="oLevel"/>
+                    <include name="aLevel"/>
+                </methods>
+            </class>
+            <class name="testNG.PriorityTest1">
+                <methods>
+                    <include name="testLogin"/>
+                    <include name="testCreate"/>
+                    <include name="testEdit"/>
+                    <include name="testDelete"/>
+                    <include name="testLogout"/>
+                </methods>
+            </class>
+            <class name="testNG.TestNGAnnotation">
+                <methods>
+                    <include name="test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
